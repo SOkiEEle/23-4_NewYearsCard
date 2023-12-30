@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=M+PLUS+Rounded+1c:wght@700&family=Zen+Kurenaido&display=swap");
+    </style>
+
+    <title>2023-24年賀状</title>
+  </head>
+  <body>
+    <div class="no-print" style="height: 32px"></div>
+
+    <div id="main">
+      <div id="frame" class="no-print"></div>
+
+      <div id="card">
+
+        <div class="HNYbox" style="z-index:50">
+            <div class="text"> Happy New Year !! <br> 2024</div>
+        </div>
+
+        <div class = "rotate_dragon" style="z-index:100">
+            <img 
+            src="https://drive.google.com/uc?id=16A2yucAixr9pJJre-XdmgyoomiAu1Zac"
+            width="485px"; 
+            alt="サンプル画像が表示されます。" 
+            >
+        </div>
+
+        <div id="omikuji-msg" style="z-index:10">あたり</div>
+
+        <div id="address_l">
+            <a>Oki Soichiro</a>
+        </div>
+
+        <div class="msg_box">
+          <div class="text">  </div>
+        </div>
+
+        <div id="msg"></div>
+
+      </div>
+    </div>
+
+    <div class="detail no-print">
+      <div class="toolbar">
+        <button onclick="window.print()">印刷</button>
+      </div>
+      <div>
+        <div
+          style="display: flex; justify-content: space-between; margin-top: 8px"
+        ><!--
+          <div>
+            <textarea
+              style="max-width: 12cm;"
+              type="text"
+              name="msgbox"
+              cols="48"
+              rows="4"
+              maxlength="100"
+              id="msgbox"
+              placeholder="メッセージをどうぞご自由にお書きください"
+            ></textarea>
+          </div>
+          <button onclick="sendMsg()">送信</button>
+        </div>
+        -->
+      </div>
+      <div class="input">
+        <form action="https://script.google.com/macros/s/AKfycbxu6VhF0Ws1i5YlnEPRjxhRtOV5MKZIzqLbmzou5Sa15NGZ74sxHJXj630rcrw2AS8A/exec" method="POST">
+        <input type="text" name="name" placeholder="お名前またはペンネーム" required>
+        <input type="text" name="comment" placeholder="メッセージ" required>
+        <input id="playButton" class="btn" type="submit" value="送信">
+        </form>
+    </div>
+    </div>
+
+  </div>
+  </body>
+</html>
+
+<style>
+  input {
+    border: #000 2px solid;
+    border-radius: 5px;
+  }
+
+  textarea {
+    border: #000000 2px solid;
+    border-radius: 5px;
+  }
+
+  * {
+    font-family: "arial black", sans-serif;
+    color: #333;
+    font-size: 0.4cm;
+  }
+
+  button {
+    background-color: #ffffff;
+    border: #000000 solid 2px;
+    border-radius: 2px;
+  }
+
+  @media print {
+    .no-print {
+      display: none;
+    }
+  }
+
+  div#omikuji-msg {
+    position: absolute;
+    bottom: 0.6cm;
+    right: 0.75cm;
+    font-size: 0.7cm;
+    color: #ff0800;
+    font-family: "HiraMinProN-W6", sans-serif;
+  }
+
+  div.detail {
+    width: 14.8cm;
+    margin: 16px auto;
+  }
+
+  div.toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div#msg {
+    color: #000;
+    font-family: "arial black", sans-serif;
+    position: absolute;
+    bottom: 1.9cm;
+    right: 0.6cm;
+    font-size: 0.47cm;
+    text-align: center;
+  }
+  /*font-family: Zen kurenaido / KouzanGyousho / HiraMinProN-W6 /  */
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  /* ページの背景の設定 */
+  body {
+    background-color: #d2ffd27e;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    margin: 0px;
+    padding: 0px;
+    font-family: "arial black", sans-serif;
+  }
+
+
+  /* 自分の名前の欄の設定 */
+  div#address_l{
+    position: absolute;
+    bottom: 0.0cm;
+    left: 0.5cm;
+    font-size: 0.3cm;
+    text-align: center;
+    font-family: "arial black", sans-serif;
+  }
+
+  /*テキストの設定*/
+  div.text {
+    font-size: 1.0cm;
+    font-family: "arial black", serif;
+    font-weight: bold;
+    margin: auto auto;
+    rotate: 0deg;
+  }
+
+  div#middle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1cm;
+    /* flex-direction: row-reverse; */
+  }
+  div#main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div#card {
+    width: 14.8cm;
+    height: 9.948cm;
+    background-color: #a6f9ff !important;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div#frame {
+    width: 14.8cm;
+    height: 9.95cm;
+    border: 2px solid #000;
+    position: absolute;
+  }
+
+  div#bottom {
+    width: 100%;
+    height: 0.75cm;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+  }
+
+  div.btm {
+    width: 10%;
+    height: 100%;
+  }
+  div.red {
+    background-color: #ff7e79 !important;
+  }
+  div.white {
+    background-color: #fff !important;
+  }
+  div.dred {
+    background-color: #ff7e79;
+  }
+  div.dwhite {
+    background-color: #fff;
+  }
+
+  div.rotate_dragon {
+    rotate: -20deg;
+    position: absolute;
+    bottom: -0.3cm;
+    right: 0.3cm;
+  }
+
+  div.HNYbox{
+    transform: skewY(-12deg);
+    width: 11.0cm;
+    height: 3.0cm;
+    margin: auto auto;
+    padding-left: 0.4cm;
+    rotate: 0deg;
+    font-size: 1.9cm;
+    background-color:#fff200;
+    position: absolute;
+    top: 1.3cm; 
+    left: 0.2cm;
+    border-radius: 0.2cm;
+  }
+
+  div.msg_box{
+    width: 4.0cm;
+    height: 3.3cm;
+    margin: auto auto;
+    rotate: 0deg;
+    background-color:#d0fdfe;
+    position: absolute;
+    bottom: 0.3cm;
+    right: 0.5cm;
+    border-radius:0.2cm;
+  }
+
+</style>
+
+
+
+
+<script>
+
+  const msgforme = document.getElementById("msgbox");
+  const namebox = document.getElementById("name");
+  const msgbox = document.getElementById("msg");
+  const index = Math.floor(Math.random() * 5);
+  const msglist = [
+    "幸多き一年と<br>なりますように！<br>",
+    "新たな気持ちで<br>がんばりましょう<br>",
+    "いつもありがとう<br>今年もよろしく！<br>",
+    "ともに飛躍の年に<br>しましょう！<br>",
+    "今年も切磋琢磨で<br>がんばりましょう<br>",
+  ];
+  msgbox.innerHTML = msglist[index];
+
+  const omikujiMsg = document.getElementById("omikuji-msg");
+  const index2 = Math.floor(Math.random() * 20);
+
+  if (index2 >= 18) {
+    omikujiMsg.innerHTML = "運勢：大吉";
+  } else if (index2 >= 15) {
+    omikujiMsg.innerHTML = "運勢：中吉";
+  } else if (index2 >= 11) {
+    omikujiMsg.innerHTML = "運勢：小吉";
+  } else if (index2 >= 6) {
+    omikujiMsg.innerHTML = "運勢：　吉";
+  } else if (index2 >= 1) {
+    omikujiMsg.innerHTML = "運勢：末吉";
+  } else {
+    omikujiMsg.innerHTML = "運勢：最強";
+  }
+
+</script>
